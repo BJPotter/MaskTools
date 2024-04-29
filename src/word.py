@@ -1,6 +1,5 @@
 import re
 from docx import Document
-# 针对一户一档进行优化
 def mask_content(text):
     """
     检查文本是否包含电话号码或地址，如果存在，则将其替换为"****"
@@ -34,7 +33,3 @@ def word_encrypt_file(file_path, save_path):
     # 保存处理后的文档
     doc.save(save_path)
 
-
-
-# 调用函数处理文件
-#word_encrypt_file('D:\\Desktop\\221010646485一户一案.docx', 'D:\\Desktop\\221010646485一户一案-mask.docx')
