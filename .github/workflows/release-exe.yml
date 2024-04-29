@@ -49,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MASK_GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/mask_ui.exe
-          asset_name: mask_ui.exe
+          asset_path: ./dist/mask_ui
+          asset_name: mask_ui
           asset_content_type: application/octet-stream
