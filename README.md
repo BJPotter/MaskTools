@@ -21,8 +21,7 @@
 
 2. 安装依赖：在项目的根目录下运行以下命令以安装所有必要的依赖。
 
-   cd src
-   pip install -r requirements.txt
+   cd src && pip install -r requirements.txt
    
 
 3. 运行代码：运行下面的命令开始处理你的文件。
