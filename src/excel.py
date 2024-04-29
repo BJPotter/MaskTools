@@ -36,9 +36,9 @@ def excel_encrypt_file(file_path, save_path):
 #<<<<<<<<<<<<<<<<<<<<<<<
     #指定处理，开放下面这两行的注释
     #不处理的列
-    #skip_columns = ["账号", "宽带账号","account"]
+    #skip_columns = ["columns_name1", "columns_name2","columns_name3"]
     #必须加密的列
-    #necessary_columns = ["CRM联系电话", "融合手机号","地址","标准小区"]
+    #necessary_columns = ["columns_name4", "columns_name5","columns_name6","columns_name7"]
 #----------------------------
     #默认处理开放下面这两行处理
     skip_columns = []
@@ -62,9 +62,4 @@ def excel_encrypt_file(file_path, save_path):
     with pd.ExcelWriter(save_path, engine='xlsxwriter', options={'strings_to_urls': False}) as writer:
         df.to_excel(writer, index=False)  # 保留原来的 index
 
-
-
-
-# 调用函数处理文件。
-#excel_encrypt_file('D:\Desktop\VIP0627.xlsx', 'D:\Desktop\VIP0627-mask.xlsx')
 
