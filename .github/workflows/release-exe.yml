@@ -26,8 +26,11 @@ jobs:
 
       - name: Build Executable
         run: |
-          pyinstaller --onefile src/mask_ui.py
-
+          pyinstaller --onefile --distpath=./dist src/mask_ui.py
+          
+      - name: List files in dist directory
+        run: |
+          ls ./dist
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -46,6 +49,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MASK_GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/mask.exe
-          asset_name: mask.exe
+          asset_path: ./dist/mask_ui.exe
+          asset_name: mask_ui.exe
           asset_content_type: application/octet-stream
