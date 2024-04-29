@@ -16,12 +16,12 @@
 1. 获取代码：使用Git从我们的repository克隆代码到你的本地环境。
 
    
-   git clone <repository-url>
+   git clone https://github.com/BJPotter/MaskTools.git
    
 
 2. 安装依赖：在项目的根目录下运行以下命令以安装所有必要的依赖。
 
-   
+   cd src
    pip install -r requirements.txt
    
 
